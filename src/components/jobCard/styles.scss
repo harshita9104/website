@@ -1,68 +1,54 @@
+
 .job-card {
   display: flex;
   flex-direction: row;
   height: 120px;
-  overflow: hidden;
-  border-radius: 5px;
-  filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.05));
+  border-radius: 8px; // Changed from 5px
+  filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.1)); // Enhanced shadow
   background-color: #fff;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 15px;
+  padding: 20px; // Increased from 15px
   cursor: pointer;
+  transition: transform 0.2s; // Added transition
+
+  &:hover {
+    transform: translateY(-2px); // Added hover effect
+  }
 
   .image {
-    width: 80px;
-    height: 80px;
-    margin-left: 20px;
+    width: 90px; // Increased from 80px
+    height: 90px; // Increased from 80px
+    margin-left: 15px; // Reduced from 20px
 
     img {
-      margin-top: 4px;
+      margin-top: 0; // Changed from 4px
       width: 100%;
       height: 100%;
+      border-radius: 6px; // Added border radius
     }
   }
 
   .content {
     flex: 1;
-    margin-left: 50px;
+    margin-left: 30px; // Reduced from 50px
 
     .title {
       color: #1c77c8;
       font-size: 18px;
-      margin-top: 10px;
-      margin-left: 6px;
+      margin-top: 5px; // Reduced from 10px
+      font-weight: 600; // Added font weight
     }
 
     .info {
       display: flex;
-      gap: 10px;
-
-      .location,
-      .company {
-        display: flex;
-        align-items: center;
-      }
-
-      .company-icon {
-        font-size: 22px;
-      }
-
-      .location-icon {
-        font-size: 20px;
-      }
+      gap: 20px; // Increased from 10px
+      margin-top: 12px; // Added margin top
+      color: #666; // Added color
     }
   }
 
   .date {
-    font-size: 16px;
-    display: flex;
-    align-items: center;
-  }
-}
-
-html[data-theme="dark"] {
-  .job-card {
-    background-color: #242526;
-    border: 1px solid rgba(255, 255, 255, 0.06);
+    font-size: 14px; // Reduced from 16px
+    color: #666; // Added color
   }
 }
